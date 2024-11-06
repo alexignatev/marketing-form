@@ -29,7 +29,7 @@ export function BasicInfo({ data, onChange, onValidChange }: BasicInfoProps) {
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'Введите корректный email'
         return ''
       case 'phone':
-        if (!value) return 'Телефон обязателен для заполнения'
+        if (!value) return 'Телефон обязат��лен для заполнения'
         if (!/^\+?[\d\s-()]{10,}$/.test(value)) return 'Введите корректный номер телефона'
         return ''
       default:
@@ -49,7 +49,7 @@ export function BasicInfo({ data, onChange, onValidChange }: BasicInfoProps) {
       data.email &&
       data.phone
     onValidChange(isValid)
-  }, [errors, data])
+  }, [errors, data, onValidChange])
 
   return (
     <Card>

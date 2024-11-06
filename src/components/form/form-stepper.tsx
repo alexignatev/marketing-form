@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card'
 import { Progress } from '@/components/ui/progress'
 import { Button } from '@/components/ui/button'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import { formConfig } from '@/config/form-config'
+import { formConfig, StepID } from '@/config/form-config'
 import { cn } from '@/lib/utils'
 
 interface FormStepperProps {
@@ -83,7 +83,10 @@ export function FormStepper({
   }
 
   const renderStepContent = () => {
-    const stepConfig = formConfig.steps[activeStep]
+    const stepConfig = formConfig.steps[activeStep] as typeof formConfig.steps[number] & { id: StepID };
+
+    const StepComponent = formConfig.stepComponents[stepConfig.id];
+
     return (
       <div className="space-y-6">
         <div className="space-y-2">
@@ -93,15 +96,16 @@ export function FormStepper({
           )}
         </div>
         
-        {React.createElement(formConfig.stepComponents[stepConfig.id], {
-          data: formData[stepConfig.id] || {},
-          onChange: (data: any) =>
+        <StepComponent
+          data={formData[stepConfig.id] || {}}
+          onChange={(data: any) =>
             setFormData(prev => ({
               ...prev,
               [stepConfig.id]: { ...prev[stepConfig.id], ...data }
-            })),
-          onValidChange: setIsValid
-        })}
+            }))
+          }
+          onValidChange={setIsValid}
+        />
       </div>
     )
   }

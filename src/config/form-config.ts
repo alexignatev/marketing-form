@@ -3,10 +3,12 @@ import { Experience } from "@/components/form/steps/experience";
 import { Education } from "@/components/form/steps/education";
 import { Motivation } from "@/components/form/steps/motivation";
 
+export type StepID = 'basicInfo' | 'experience' | 'education' | 'motivation';
+
 export const formConfig = {
   steps: [
     {
-      id: 'basicInfo',
+      id: 'basicInfo' as StepID,
       title: 'Основная информация',
       description: 'Заполните ваши личные данные',
       questions: [
