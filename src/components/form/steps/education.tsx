@@ -70,11 +70,13 @@ export function Education({ data, onChange, onValidChange }: EducationProps) {
   }
 
   useEffect(() => {
-    const isValid = !Object.values(errors).some(error => error) &&
+    const isValid = Boolean(
+      !Object.values(errors).some(error => error) &&
       data.degree &&
       data.university &&
       data.graduationYear &&
       data.specialization
+    )
     onValidChange(isValid)
   }, [errors, data])
 
