@@ -1,15 +1,14 @@
-'use client'
-
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { Check, Pencil } from 'lucide-react'
+import React from 'react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import { Check, Pencil } from 'lucide-react';
 
 interface PreviewProps {
-  data: any
-  onEdit: (step: number) => void
-  onSubmit: () => void
-  isSubmitting: boolean
+  data: any;
+  onEdit: (step: number) => void;
+  onSubmit: () => void;
+  isSubmitting: boolean;
 }
 
 export function Preview({ data, onEdit, onSubmit, isSubmitting }: PreviewProps) {
@@ -30,32 +29,14 @@ export function Preview({ data, onEdit, onSubmit, isSubmitting }: PreviewProps) 
         { key: 'company', label: 'Компания' },
         { key: 'industry', label: 'Отрасль' }
       ]
-    },
-    {
-      title: 'Образование',
-      fields: [
-        { key: 'degree', label: 'Уровень образования' },
-        { key: 'university', label: 'Учебное заведение' },
-        { key: 'graduationYear', label: 'Год окончания' },
-        { key: 'specialization', label: 'Специализация' }
-      ]
-    },
-    {
-      title: 'Мотивация',
-      fields: [
-        { key: 'letter', label: 'Мотивационное письмо' },
-        { key: 'timeCommitment', label: 'Готовность к обучению' },
-        { key: 'goals', label: 'Цели' },
-        { key: 'expectations', label: 'Ожидания' }
-      ]
     }
-  ]
+  ];
 
   return (
     <Card className="w-full max-w-4xl mx-auto">
       <CardHeader>
         <CardTitle>Проверьте введенные данные</CardTitle>
-      # Продолжение файла src/components/form/preview.tsx
+      </CardHeader>
       <CardContent>
         <ScrollArea className="h-[600px] pr-4">
           {steps.map((step, stepIndex) => (
@@ -72,31 +53,16 @@ export function Preview({ data, onEdit, onSubmit, isSubmitting }: PreviewProps) 
                   Изменить
                 </Button>
               </div>
-
               <div className="space-y-4">
-                {step.fields.map((field, fieldIndex) => {
-                  const value = data[step.id]?.[field.key]
-                  return (
-                    <div key={fieldIndex} className="grid grid-cols-3 gap-4">
-                      <div className="font-medium text-sm">{field.label}</div>
-                      <div className="col-span-2 text-sm">
-                        {Array.isArray(value) ? (
-                          <ul className="list-disc list-inside">
-                            {value.map((item, i) => (
-                              <li key={i}>{item}</li>
-                            ))}
-                          </ul>
-                        ) : field.key === 'letter' ? (
-                          <div className="whitespace-pre-wrap">{value}</div>
-                        ) : (
-                          value || '-'
-                        )}
-                      </div>
+                {step.fields.map((field, fieldIndex) => (
+                  <div key={fieldIndex} className="grid grid-cols-3 gap-4">
+                    <div className="font-medium text-sm">{field.label}</div>
+                    <div className="col-span-2 text-sm">
+                      {data[field.key] || '-'}
                     </div>
-                  )}
-                )}
+                  </div>
+                ))}
               </div>
-
               {stepIndex < steps.length - 1 && (
                 <div className="my-4 border-b border-gray-200" />
               )}
@@ -104,7 +70,7 @@ export function Preview({ data, onEdit, onSubmit, isSubmitting }: PreviewProps) 
           ))}
         </ScrollArea>
 
-        <div className="mt-6 flex flex-col gap-4">
+        <div className="mt-6">
           <Button
             onClick={onSubmit}
             disabled={isSubmitting}
@@ -122,12 +88,8 @@ export function Preview({ data, onEdit, onSubmit, isSubmitting }: PreviewProps) 
               </span>
             )}
           </Button>
-          <p className="text-sm text-center text-muted-foreground">
-            Пожалуйста, внимательно проверьте все данные перед отправкой.
-            После отправки формы внесение изменений будет недоступно.
-          </p>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
