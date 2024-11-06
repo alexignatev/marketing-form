@@ -1,3 +1,8 @@
+import { BasicInfo } from "@/components/form/steps/basic-info";
+import { Experience } from "@/components/form/steps/experience";
+import { Education } from "@/components/form/steps/education";
+import { Motivation } from "@/components/form/steps/motivation";
+
 export const formConfig = {
   steps: [
     {
@@ -43,5 +48,13 @@ export const formConfig = {
       ]
     },
     // Другие шаги будут добавлены позже
-  ]
+  ],
+  stepComponents: {
+    basicInfo: BasicInfo,
+    experience: Experience,
+    education: Education,
+    motivation: Motivation
+  }
 }
+
+export type FormConfig = typeof formConfig;
