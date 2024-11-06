@@ -15,6 +15,10 @@ interface FormStepperProps {
   onStepChange?: (step: number) => void
 }
 
+interface FormData {
+  [key: string]: Record<string, string> | undefined
+}
+
 export function FormStepper({
   onStepComplete,
   initialData = {},
@@ -22,7 +26,7 @@ export function FormStepper({
   onStepChange
 }: FormStepperProps) {
   const [activeStep, setActiveStep] = useState(currentStep)
-  const [formData, setFormData] = useState(initialData)
+  const [formData, setFormData] = useState<FormData>(initialData)
   const [isValid, setIsValid] = useState(false)
 
   useEffect(() => {
@@ -97,7 +101,7 @@ export function FormStepper({
         </div>
         
         <StepComponent
-          data={formData[stepConfig.id] || {}}
+          data={formData[stepConfig.id] as Record<string, string> || {}}
           onChange={(data: any) =>
             setFormData(prev => ({
               ...prev,
