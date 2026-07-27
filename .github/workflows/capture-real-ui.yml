@@ -31,7 +31,7 @@ jobs:
           npx playwright install --with-deps chromium
 
       - name: Capture official pages and original assets
-        run: node research/real-ui-screenshots/capture.mjs
+        run: node research/real-ui-screenshots/run-fixed.mjs
 
       - name: Validate output
         run: |
