@@ -1,0 +1,51 @@
+name: Capture real public UI screenshots
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/capture-real-ui.yml'
+      - 'research/real-ui-screenshots/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright and Chromium
+        run: |
+          npm init -y
+          npm install playwright@1.54.1
+          npx playwright install --with-deps chromium
+
+      - name: Capture official pages and original assets
+        run: node research/real-ui-screenshots/capture.mjs
+
+      - name: Validate output
+        run: |
+          test -f SARV_REAL_UI_SCREENSHOTS_2026-07-27/index.html
+          test -f SARV_REAL_UI_SCREENSHOTS_2026-07-27/manifest.csv
+          test -f SARV_REAL_UI_SCREENSHOTS_2026-07-27/manifest.json
+          echo "Images: $(find SARV_REAL_UI_SCREENSHOTS_2026-07-27 -type f | grep -Ei '\.(png|jpg|jpeg|webp|gif)$' | wc -l)"
+          echo "All files: $(find SARV_REAL_UI_SCREENSHOTS_2026-07-27 -type f | wc -l)"
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SARV_REAL_UI_SCREENSHOTS_2026-07-27
+          path: SARV_REAL_UI_SCREENSHOTS_2026-07-27/
+          if-no-files-found: error
+          compression-level: 6
+          retention-days: 7
