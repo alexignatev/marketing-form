@@ -1,0 +1,63 @@
+[
+  {"category":"01_Decision_Room","system":"Aera","page":"Inbox","url":"https://www.aeratechnology.com/aera-inbox/"},
+  {"category":"01_Decision_Room","system":"Aera","page":"Workspaces","url":"https://www.aeratechnology.com/aera-workspaces/"},
+  {"category":"01_Decision_Room","system":"Aera","page":"Control Room","url":"https://www.aeratechnology.com/aera-control-room/"},
+  {"category":"01_Decision_Room","system":"Aera","page":"Process Builder","url":"https://www.aeratechnology.com/process-builder/"},
+  {"category":"01_Decision_Room","system":"Aera","page":"Decision Board","url":"https://www.aeratechnology.com/decision-board/"},
+  {"category":"01_Decision_Room","system":"Palantir Foundry","page":"Foundry","url":"https://www.palantir.com/platforms/foundry/"},
+  {"category":"01_Decision_Room","system":"Palantir Foundry","page":"Object Views","url":"https://www.palantir.com/docs/foundry/object-views/use-full-views-in-platform"},
+  {"category":"01_Decision_Room","system":"Palantir Foundry","page":"Pipeline Builder","url":"https://www.palantir.com/platforms/foundry/data-integration/pipeline-builder/"},
+
+  {"category":"02_Research_and_Evidence","system":"Dovetail","page":"Research Repository","url":"https://dovetail.com/solutions/research-repository/"},
+  {"category":"02_Research_and_Evidence","system":"Dovetail","page":"AI Dashboards","url":"https://dovetail.com/product/ai-dashboards/"},
+  {"category":"02_Research_and_Evidence","system":"Dovetail","page":"Dashboard Help","url":"https://docs.dovetail.com/help/dashboards"},
+  {"category":"02_Research_and_Evidence","system":"Dovetail","page":"AI Docs","url":"https://dovetail.com/product/ai-docs/"},
+  {"category":"02_Research_and_Evidence","system":"Condens","page":"Research Repository","url":"https://condens.io/research-repository/"},
+  {"category":"02_Research_and_Evidence","system":"Condens","page":"AI Search","url":"https://condens.io/product-updates/home-ai-chat/"},
+  {"category":"02_Research_and_Evidence","system":"Condens","page":"Participant Pool","url":"https://condens.io/help/using-condens/research-repository-functionality/participant-pool/"},
+  {"category":"02_Research_and_Evidence","system":"Marvin","page":"Product Overview","url":"https://heymarvin.com/product/overview"},
+  {"category":"02_Research_and_Evidence","system":"Marvin","page":"Knowledge Hub","url":"https://heymarvin.com/product/ux-research-repository"},
+
+  {"category":"03_B2B_Account_Room","system":"Demandbase","page":"Buying Groups","url":"https://www.demandbase.com/products/buying-groups/"},
+  {"category":"03_B2B_Account_Room","system":"Demandbase","page":"Buying Group Filter Agent","url":"https://support.demandbase.com/hc/en-us/articles/38999291936923-Filtering-with-the-Buying-Group-Filter-Agent"},
+  {"category":"03_B2B_Account_Room","system":"6sense","page":"List Builder","url":"https://6sense.com/platform/list-builder/"},
+  {"category":"03_B2B_Account_Room","system":"6sense","page":"Sales Intelligence","url":"https://6sense.com/platform/sales"},
+  {"category":"03_B2B_Account_Room","system":"Common Room","page":"Person360","url":"https://www.commonroom.io/product/person-360/"},
+  {"category":"03_B2B_Account_Room","system":"Common Room","page":"Spark Brief","url":"https://www.commonroom.io/product/ai/sparkbrief/"},
+  {"category":"03_B2B_Account_Room","system":"Gong","page":"Revenue AI OS","url":"https://www.gong.io/platform"},
+  {"category":"03_B2B_Account_Room","system":"Gong","page":"Account Boards","url":"https://www.gong.io/platform/revenue-forecasting-software"},
+  {"category":"03_B2B_Account_Room","system":"Gong","page":"Deals Widget","url":"https://help.gong.io/v1/docs/deals-widget"},
+  {"category":"03_B2B_Account_Room","system":"Affinity","page":"CRM","url":"https://www.affinity.co/product/crm"},
+  {"category":"03_B2B_Account_Room","system":"Affinity","page":"Relationship Intelligence","url":"https://www.affinity.co/product/relationship-intelligence"},
+
+  {"category":"04_B2C_Cohort_Workbench","system":"Hightouch","page":"Platform","url":"https://hightouch.com/"},
+  {"category":"04_B2C_Cohort_Workbench","system":"Hightouch","page":"Match Booster","url":"https://hightouch.com/platform/match-booster"},
+  {"category":"04_B2C_Cohort_Workbench","system":"Amplitude","page":"Product Analytics","url":"https://amplitude.com/product/analytics"},
+  {"category":"04_B2C_Cohort_Workbench","system":"Amplitude","page":"Journeys","url":"https://amplitude.com/docs/analytics/charts/journey-map/journey"},
+  {"category":"04_B2C_Cohort_Workbench","system":"Mixpanel","page":"Product Analytics","url":"https://mixpanel.com/"},
+  {"category":"04_B2C_Cohort_Workbench","system":"Mixpanel","page":"Funnels","url":"https://docs.mixpanel.com/docs/reports/funnels"},
+
+  {"category":"05_B2B2C_Chain_Room","system":"Crossbeam","page":"Account Mapping","url":"https://www.crossbeam.com/what-is-crossbeam/account-mapping"},
+  {"category":"05_B2B2C_Chain_Room","system":"Crossbeam","page":"Account Mapping Matrix","url":"https://help.crossbeam.com/en/articles/5303061-account-mapping-matrix"},
+
+  {"category":"06_Identity_and_Graph","system":"Neo4j Bloom","page":"Bloom UI","url":"https://neo4j.com/docs/desktop/current/explore/"},
+  {"category":"06_Identity_and_Graph","system":"Neo4j Bloom","page":"About Bloom","url":"https://neo4j.com/docs/bloom-user-guide/current/about-bloom/"},
+  {"category":"06_Identity_and_Graph","system":"Maltego","page":"Graph","url":"https://www.maltego.com/graph/"},
+  {"category":"06_Identity_and_Graph","system":"Maltego","page":"Graph Sidebar","url":"https://docs.maltego.com/en/support/solutions/articles/15000009615-maltego-graph-sidebar"},
+  {"category":"06_Identity_and_Graph","system":"Linkurious","page":"Ogma","url":"https://linkurious.com/ogma/"},
+
+  {"category":"07_Source_Governance","system":"Atlan","page":"Data Catalog","url":"https://atlan.com/product/data-catalog/"},
+  {"category":"07_Source_Governance","system":"Atlan","page":"Data Lineage","url":"https://atlan.com/product/data-lineage/"},
+  {"category":"07_Source_Governance","system":"Transcend","page":"Data Map","url":"https://transcend.io/data-map"},
+  {"category":"07_Source_Governance","system":"Transcend","page":"Consent Management","url":"https://transcend.io/consent-management"},
+  {"category":"07_Source_Governance","system":"OneTrust","page":"Consent and Preferences","url":"https://www.onetrust.com/products/consent-and-preference-management/"},
+
+  {"category":"08_Agent_Run_Inspector","system":"Langfuse","page":"Tracing","url":"https://langfuse.com/docs/tracing"},
+  {"category":"08_Agent_Run_Inspector","system":"Langfuse","page":"Demo","url":"https://langfuse.com/demo"},
+  {"category":"08_Agent_Run_Inspector","system":"Arize Phoenix","page":"Tracing","url":"https://arize.com/docs/phoenix/tracing/llm-traces"},
+  {"category":"08_Agent_Run_Inspector","system":"Arize Phoenix","page":"Datasets and Experiments","url":"https://arize.com/docs/phoenix/datasets-and-experiments/overview-datasets"},
+  {"category":"08_Agent_Run_Inspector","system":"Temporal","page":"Web UI","url":"https://docs.temporal.io/web-ui"},
+
+  {"category":"09_Data_Enrichment_Table","system":"Clay","page":"Platform","url":"https://www.clay.com/"},
+  {"category":"09_Data_Enrichment_Table","system":"Clay","page":"Enrichment","url":"https://www.clay.com/product/enrichment"}
+]
