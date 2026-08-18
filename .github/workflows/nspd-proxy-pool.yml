@@ -28,3 +28,5 @@ jobs:
           name: nspd-proxy-result
           path: nspd_proxy_result
           retention-days: 7
+
+# Triggered for the 2026-08-18 cadastral pilot.
